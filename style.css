@@ -122,7 +122,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 4vw;
-  padding-top: 2vw;
+  padding: 2vw 0 3vw 0;
 }
 
 .card {
@@ -177,4 +177,68 @@ h4 {
 .project-title-area {
   display: flex;
   justify-content: space-between;
+}
+
+footer {
+  background-color: #4d7fb0;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw;
+  align-items: center;
+}
+
+h3 {
+  font-size: 3vw;
+}
+
+.info {
+  font-size: 1vw;
+  max-width: 25vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  color: white;
+}
+
+.footer-image {
+  width: 40vw;
+  height: 30vw;
+  overflow: hidden;
+  background-color: black;
+}
+
+.footer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.phone,
+.email {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+}
+
+.phone svg,
+.email svg {
+  fill: white;
+  height: 1.5vw;
+  width: auto;
+}
+
+.footer-icons {
+  justify-content: flex-start;
+}
+
+.footer-icons svg {
+  width: 2.1vw;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
 }
