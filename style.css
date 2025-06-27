@@ -49,7 +49,7 @@ h2 {
   width: 25vw;
   height: 30vw;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .about-me {
@@ -59,7 +59,7 @@ h2 {
   position: relative;
   background-color: white;
   z-index: 1;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -128,7 +128,7 @@ main {
 .card {
   width: 25vw;
   height: 22vw;
-  box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease-in-out 0.05s;
 }
 
