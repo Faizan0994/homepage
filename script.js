@@ -1,3 +1,4 @@
+// Links
 document.getElementById("battleship-github").addEventListener("click", () => {
   window.open("https://github.com/Faizan0994/Battleship", "_blank");
 });
@@ -56,6 +57,42 @@ document.getElementById("calculator-live").addEventListener("click", () => {
 
 // Animations
 const dovePic = document.getElementById("dove-pic");
-dovePic.addEventListener("load", () => {
+const aboutMe = document.querySelector(".about-me");
+const cards = document.querySelectorAll(".card");
+const footer = document.querySelector("footer");
+
+window.addEventListener("load", () => {
   dovePic.classList.add("loaded");
+  aboutMe.classList.add("loaded");
 });
+
+// intersection observer gives better performance than scroll event listeners
+const cardObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+const footerObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        footerObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+cards.forEach((card) => {
+  cardObserver.observe(card);
+});
+
+footerObserver.observe(footer);
