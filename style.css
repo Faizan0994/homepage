@@ -22,7 +22,7 @@ body {
 
 header {
   position: relative;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,6 +64,14 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-me.loaded {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 .icons {
@@ -103,7 +111,7 @@ h2 {
   inset: 0;
   z-index: 0;
   background-color: black;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 85%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 80%);
   background-color: #4d7fb0;
 }
 
@@ -114,12 +122,19 @@ h2 {
   object-position: center;
   opacity: 0;
   transform: scale(1.02);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateX(-20px);
+  transition: opacity 1s ease, transform 1s ease, transform 0.6s ease,
+    filter 1s ease;
+}
+
+.picture-box > img:hover {
+  filter: blur(2px);
 }
 
 .picture-box > img.loaded {
   opacity: 1;
   transform: scale(1);
+  transform: translateX(0);
 }
 
 main {
@@ -138,7 +153,15 @@ main {
   width: 25vw;
   height: 22vw;
   box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease-in-out 0.05s;
+  transition: transform 0.3s ease-in-out 0.05s, opacity 0.7s ease,
+    transform 0.7s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .card:hover {
@@ -195,6 +218,14 @@ footer {
   justify-content: space-between;
   padding: 0 10vw;
   align-items: center;
+  opacity: 0.3;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+footer.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h3 {
@@ -215,6 +246,7 @@ h3 {
   height: 30vw;
   overflow: hidden;
   background-color: black;
+  border-radius: 50%;
 }
 
 .footer-image img {
@@ -222,6 +254,11 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: filter 1s ease;
+}
+
+.footer-image img:hover {
+  filter: blur(2px);
 }
 
 .phone,
@@ -422,6 +459,11 @@ h3 {
     justify-content: flex-start;
     gap: 3vh;
     box-shadow: none;
+    transform: translateY(20px);
+  }
+
+  .about-me.loaded {
+    transform: translateY(0px);
   }
 
   .about-me .icons {
