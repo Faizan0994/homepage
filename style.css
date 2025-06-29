@@ -437,6 +437,16 @@ h3 {
     height: 55vh;
   }
 
+  .picture-box img {
+    transform: translateY(20px);
+  }
+
+  .picture-box > img.loaded {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0);
+  }
+
   .name {
     font-size: 6vh;
   }
