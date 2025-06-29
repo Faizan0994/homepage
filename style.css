@@ -33,6 +33,7 @@ h2,
 h3,
 h4 {
   font-family: DMSerifDisplay;
+  font-weight: 100;
 }
 
 h1 {
@@ -375,5 +376,147 @@ h3 {
 
   h3 {
     font-size: 5vw;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4vh;
+  }
+
+  .picture-box {
+    width: 80vw;
+    height: 55vh;
+  }
+
+  .name {
+    font-size: 6vh;
+  }
+
+  h1 {
+    font-size: 5vh;
+    text-align: center;
+  }
+
+  .about-me p {
+    font-size: 2.5vh;
+    text-align: center;
+    padding: 0 10vw;
+  }
+
+  .about-me {
+    width: 100vw;
+    height: auto;
+    padding: 2vh 0;
+    justify-content: flex-start;
+    gap: 3vh;
+    box-shadow: none;
+  }
+
+  .about-me .icons {
+    justify-content: center;
+    gap: 6vw;
+  }
+
+  .about-me .icons svg {
+    height: 4vh;
+    width: auto;
+  }
+
+  .header-background {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 0% 41%);
+  }
+
+  main {
+    padding: 12vh 7vw 4vh 7vw;
+  }
+
+  .cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8vh;
+    padding: 4vh 0;
+  }
+
+  h2 {
+    font-size: 4vh;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  .card {
+    height: 70vw;
+    width: 75vw;
+  }
+
+  h4 {
+    font-size: 2.2vh;
+  }
+
+  .project-icons svg {
+    height: 2.2vh;
+    width: auto;
+  }
+
+  .project-info {
+    padding: 0.5vh 4vw;
+  }
+
+  .project-info p {
+    font-size: 1.8vh;
+    padding-top: 0.7vh;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 4vh 10vw;
+    gap: 4vh;
+  }
+
+  .info {
+    max-width: 100%;
+    gap: 3vh;
+  }
+
+  .info p {
+    font-size: 1.8vh;
+  }
+
+  h3 {
+    font-size: 3.5vh;
+    text-align: center;
+  }
+
+  .phone svg,
+  .email svg {
+    height: 1.8vh;
+    width: auto;
+  }
+
+  .phone,
+  .email {
+    gap: 3vw;
+  }
+
+  .footer-image {
+    height: 40vh;
+    width: 100%;
+  }
+
+  .footer-icons {
+    justify-content: center;
+    gap: 5vw;
+  }
+
+  .footer-icons svg {
+    height: 3vh;
+    width: auto;
   }
 }
