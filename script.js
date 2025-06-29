@@ -53,3 +53,9 @@ document.getElementById("calculator-github").addEventListener("click", () => {
 document.getElementById("calculator-live").addEventListener("click", () => {
   window.open("https://faizan0994.github.io/TOP_calculator", "_blank");
 });
+
+// Animations
+const dovePic = document.getElementById("dove-pic");
+dovePic.addEventListener("load", () => {
+  dovePic.classList.add("loaded");
+});
